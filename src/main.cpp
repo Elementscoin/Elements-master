@@ -32,7 +32,7 @@ CTxMemPool mempool;
 unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-uint256 hashGenesisBlock("00000d20bb9d1dcf1d1696ace9ccf6cf48bc0993f7707d5320e47a62717ff9fc");
+uint256 hashGenesisBlock("000001909881a6d75e9cf11b242d65998abffadebfc99dbb239135b4b5ab7da3");
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // Elements: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
@@ -2991,7 +2991,7 @@ bool InitBlockIndex() {
     // CTxOut(nValue=400.00000000, scriptPubKey=040184710fa689ad5023690c80f3a4)
     // vMerkleTree: b0019d92bc054f7418960c91e252e7d24c77719c7a30128c5f6a827c73095d2a 
 	
-		const char* pszTimestamp = "Elements 1502260636";
+		const char* pszTimestamp = "Elements 1506355197";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -3003,13 +3003,13 @@ bool InitBlockIndex() {
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1502260636;
+        block.nTime    = 1506355197;
         block.nBits    = 0x1e0ffff0;
-        block.nNonce   = 1115350;
+        block.nNonce   = 843405;
 
         if (fTestNet)
         {
-            block.nTime    = 1398004420;
+            block.nTime    = 1506355197;
             block.nNonce   = 7060;
         }
 
@@ -3048,7 +3048,7 @@ bool InitBlockIndex() {
         printf("%s\n", hash.ToString().c_str());
         printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", block.hashMerkleRoot.ToString().c_str());
-        assert(block.hashMerkleRoot == uint256("0x18caddc9948b2182c60ab1b7a1886087fe48614a5a7ce977e34719a64980358c"));
+        assert(block.hashMerkleRoot == uint256("0xd877ba525db693c9593b5b485e6ddadbe0b0d8484441d0e22fbd478f0deceac0"));
 
 
         block.print();
