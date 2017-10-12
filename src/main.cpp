@@ -1129,12 +1129,12 @@ unsigned int ComputeMinWork(unsigned int nBase, int64 nTime)
                     // Maximum 400% adjustment...
                     bnResult *= 4;
                     // ... in best-case exactly 4-times-normal target time
-                    nTime -= nTargetTimespan*4;
+                    nTime -= nTargetTimespan;
            } else {
                     // Maximum 10% adjustment...
                     bnResult = (bnResult * 110) / 100;
                     // ... in best-case exactly 4-times-normal target time
-                    nTime -= nTargetTimespan*4;
+                    nTime -= nTargetTimespan;
            }
     }
     if (bnResult > bnProofOfWorkLimit)
