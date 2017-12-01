@@ -79,7 +79,7 @@ int64 nMinimumInputValue = DUST_HARD_LIMIT;
 //1 : GetNextWorkRequired v1
 //2 : KGW
 //3 : Digishield
-int DiffMode = 2;
+int DiffMode = 3;
 
 //////////////////////////////////////////////////////////////////////////////
 //
@@ -1107,7 +1107,7 @@ static const int64 nTargetSpacing = 30; // Elements: 1 minute
 static const int64 nInterval = nTargetTimespan / nTargetSpacing;
 
 static const int64 nTargetTimespanV2 = 60;
-static const int64 nTargetSpacingV2 = 60;
+static const int64 nTargetSpacingV2 = 30;
 static const int64 nIntervalV2 = nTargetTimespanV2 / nTargetSpacingV2;
 
 //
